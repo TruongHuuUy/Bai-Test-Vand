@@ -1,9 +1,9 @@
 // Sap xep lai data
-const sortData = (fieldName, data) => {
+const sortDescending = (fieldName, data) => {
     return data.sort((a, b) => b[fieldName] - a[fieldName]);
 };
 
-const sortDataMin = (fieldName, data) => {
+const sortAscending = (fieldName, data) => {
     return data.sort((a, b) => a[fieldName] - b[fieldName]);
 };
 
@@ -40,6 +40,7 @@ const showModal = async () => {
             }
         })
     }
+    
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape" && !modal.classList.contains("hidden")) {
           closeModal();
@@ -100,14 +101,15 @@ const renderCountryHtml = (item) => {
     } else {
         const ulList = document.querySelector(".country");
         const dataContries = `
-             <h2 class="title-countries">Không tìm thấy thông tin Quốc Gia</h2>
+             <h2 class="title-non-countries">Không tìm thấy thông tin Quốc Gia</h2>
+             <h3>Mời bạn chọn Quốc gia khác</h3>
          `;
      ;
      ulList.innerHTML = dataContries;
     }
 };
 
-// Hàm lấy API Table covid 19
+// Hàm lấy API covid 19
 const fetchApi = async () => {
     // Lấy element bên HTML
     const newBtn = document.getElementById("new");
@@ -132,7 +134,7 @@ const fetchApi = async () => {
         deathBtn.classList.remove("buttonSorted");
         deathBtn.classList.add("buttonSort");
 
-        const data = sortData("NewConfirmed", jsonData.Countries);
+        const data = sortDescending("NewConfirmed", jsonData.Countries);
         renderHtml(data);
     });
 
@@ -147,7 +149,7 @@ const fetchApi = async () => {
         newBtn.classList.remove("buttonSorted");
         newBtn.classList.add("buttonSort");
 
-        const data = sortData("TotalDeaths", jsonData.Countries);
+        const data = sortDescending("TotalDeaths", jsonData.Countries);
         renderHtml(data);
     });
 
@@ -162,7 +164,7 @@ const fetchApi = async () => {
         deathBtn.classList.remove("buttonSorted");
         deathBtn.classList.add("buttonSort");
 
-        const data = sortDataMin("TotalRecovered", jsonData.Countries);
+        const data = sortAscending("TotalRecovered", jsonData.Countries);
         renderHtml(data);
     });
 };

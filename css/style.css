@@ -128,6 +128,7 @@ img {
 
 .country {
   width: 40%;
+  height: 29%;
   position: fixed;
   z-index: 2;
   top: 50%;
@@ -202,6 +203,25 @@ img {
   color: chocolate;
 }
 
+.title-non-countries{
+  color: chocolate;
+  padding-top: 20%;
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+.animate-bottom-modal {
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
 /* loding */
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
@@ -211,15 +231,6 @@ img {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-
-/* show page từ dưới lên "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
 }
 
 @-webkit-keyframes animatebottom {
@@ -235,12 +246,9 @@ img {
 @media screen and (max-width: 900px) {
   .country {
     width: 80%;
+    height: 26%;
     border-radius: 15px;
   }
-  .left, .right {
-    width: 50%;
-  }
-  
   .middle {
     width: 40%;
   }
@@ -261,11 +269,15 @@ img {
   table {
     width: 100%;
   }
+  .title-non-countries{
+    padding-top: 17%;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .country {
     width: 100%;
+    height: auto;
   }
   .left, .right {
     width: 98%;
@@ -279,9 +291,13 @@ img {
   }
   .img-flags {
     width: 95%;
+    margin-left: 0%;
   }
   .column{
-    margin-top: -8%;
+    margin-top: -12%;
+  }
+  .title-non-countries{
+    padding-top: 0%;
   }
 }
 
