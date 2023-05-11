@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body onload="myFunction()">
+    <div id="loader" class="loading"></div>
+    <div id="myDiv" class="animate-bottom">
+      
+      <div id="CauB">      
+        <div class="hero-image">
+          <h1 class="title">Thống Kê Coronavirus COVID 19</h1>
+          <button class="buttonSort" id="new">Sort theo số lượng nhiễm mới</button>
+          <button class="buttonSort" id="death">Sort theo số người chết</button>
+          <button class="buttonSort" id="restore">Sort theo số người phục hồi</button>
+        </div>
+        <table id="myTable" class="covid center">
+          <thead>
+            <th>Tên quốc gia</th>
+            <th>Tổng số lượng nhiễm</th>
+            <th>Số lượng nhiễm mới</th>
+            <th>Số người chết</th>
+            <th>Số người phục hồi</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <!-- <button class="btn-close">⨉</button> -->
+        <div class="overlay hidden"></div>
+        <div class="country hidden"></div>
+    </div>
+    
+    <script src="./js/main.js"></script>
+    <script src="./js/cauA.js"></script>
+    <script src="./js/loading.js"></script>
+  </body>
+</html>
