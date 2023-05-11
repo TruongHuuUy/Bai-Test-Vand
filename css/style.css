@@ -128,13 +128,14 @@ img {
 
 .country {
   width: 40%;
-  position: absolute;
+  position: fixed;
   z-index: 2;
-  top: 4%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 15px;
+  transform: translate(-50%, -50%);
 }
 
 .btn-close {
@@ -234,9 +235,7 @@ img {
 @media screen and (max-width: 900px) {
   .country {
     width: 80%;
-    left: 10%;
     border-radius: 15px;
-    top: 2%;
   }
   .left, .right {
     width: 50%;
@@ -267,9 +266,6 @@ img {
 @media screen and (max-width: 600px) {
   .country {
     width: 100%;
-    left: 0%;
-    border-radius: 15px;
-    top: 2%;
   }
   .left, .right {
     width: 98%;
