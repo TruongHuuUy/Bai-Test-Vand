@@ -128,7 +128,7 @@ img {
 
 .country {
   width: 40%;
-  height: 29%;
+  height: 33%;
   position: fixed;
   z-index: 2;
   top: 50%;
@@ -174,10 +174,12 @@ img {
 
 .left, .right {
   width: 40%;
+  padding-left: 8%;
 }
 
 .middle {
   width: 40%;
+  padding-left: 5%;
 }
 
 .row {
@@ -193,6 +195,7 @@ img {
   border-width: 1px;
   border-style: solid;
   border-color: ghostwhite;
+  max-height: 163px;
 }
 
 .text-image{
@@ -205,7 +208,7 @@ img {
 
 .title-non-countries{
   color: chocolate;
-  padding-top: 20%;
+  padding-top: 15%;
 }
 
 .animate-bottom {
@@ -243,6 +246,22 @@ img {
   to{ bottom:0; opacity:1 }
 }
 
+@media screen and (max-width: 2560px) {
+  .country {
+    width: 30%;
+    height: 36%;
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .country {
+    width: 50%;
+    height: 36%;
+    border-radius: 15px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .country {
     width: 80%;
@@ -274,6 +293,13 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .country {
+    height: 36%;
+    border-radius: 15px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .country {
     width: 100%;
@@ -281,6 +307,7 @@ img {
   }
   .left, .right {
     width: 98%;
+    padding-left: 3%;
   }
   .middle {
     width: 100%;
